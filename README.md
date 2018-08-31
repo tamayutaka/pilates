@@ -8,13 +8,19 @@ tamayutaka
 担当：プロジェクトリーダー
 
 開発担当：
+
 \src\bo\DataCheck.java
+
 \src\bo\DataInput.java
+
 \src\bo\MailDataLogic.java
+
 \src\bo\SendMail.java
+
 
 \src\dao\DataDAO.java
 \src\dao\OutPutDAO.java
+
 
 \src\model\MailData.java
 \src\model\ReserveData
