@@ -16,19 +16,19 @@ tamayutaka
 \src\bo\MailDataLogic.java
 
 \src\bo\SendMail.java
-
+　
 
 
 \src\dao\DataDAO.java
 
 \src\dao\OutPutDAO.java
-
+　
 
 
 \src\model\MailData.java
 
 \src\model\ReserveData
-
+　
 
 
 \src\servlet\Mail.java
