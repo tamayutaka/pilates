@@ -34,3 +34,8 @@ tamayutaka
 \src\servlet\Mail.java
 
 \src\servlet\Reserve.java
+
+
+\src\test\TestSendMail.java
+
+\src\test\testDataDAO.java
