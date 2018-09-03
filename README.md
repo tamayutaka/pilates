@@ -4,10 +4,9 @@
 ピラティスレッスン予約サイト
 5名チーム
 
-tamayutaka
-担当：プロジェクトリーダー
+tamayutaka担当：プロジェクトリーダー
 
-開発担当：
+tamayutaka開発一覧：
 
 \src\bo\DataCheck.java
 
