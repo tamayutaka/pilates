@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p>予約受付完了しました。</p>
-<p>予約受付完了メールが届かない場合は、</p>
-<p>relax.pilates123@gmail.comまでお問い合わせください。</p>
+<p>予約受付完了</p>
 </body>
 </html>

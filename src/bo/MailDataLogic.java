@@ -7,14 +7,10 @@ import model.ReserveData;
 
 public class MailDataLogic {
 
-	public boolean rsvData(Lesson lesson, ReserveData rData) {
+	public MailData rsvData(Lesson lesson, ReserveData rData) {
 		DataDAO dataDAO = new DataDAO();
-		MailData mailData = null;
-		SendMail sm=new SendMail();
-
+		MailData mailData = new MailData();
 		mailData=dataDAO.findNum(lesson, rData);
-		boolean result=sm.send(mailData);
-
-		return result;
+		return mailData;
 	}
 }

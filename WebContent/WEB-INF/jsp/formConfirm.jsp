@@ -1,12 +1,10 @@
 <!-- 確認画面(行く先はReserve.java(servlet)) -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="model.ReserveData,model.Color,java.util.HashMap" %>
+<%@ page import="model.ReserveData,model.Color" %>
 <%
 ReserveData reserveData=(ReserveData) session.getAttribute("reserveData");
 Color color=new Color();
-HashMap<String,String> emsRsv = (HashMap<String,String>)request.getAttribute("emsRsv");
-
 %>
 <!DOCTYPE html>
 <html>
@@ -32,15 +30,9 @@ HashMap<String,String> emsRsv = (HashMap<String,String>)request.getAttribute("em
 <div id="wrapper">
 <h2>確認画面</h2>
 
-<%
-if(emsRsv != null && emsRsv.size()>0){
-	if(emsRsv.containsKey("reserved")){
-		out.print(emsRsv.get("reserved"));
-	}
-}
-%>
 
-<form action="/Pilates/Reserve" method="post">
+
+<form action="#" method="post">
 
 <table>
 <tr>

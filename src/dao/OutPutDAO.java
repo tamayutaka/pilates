@@ -11,11 +11,12 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class OutPutDAO {
 
-	//public static void main(String[] args)throws Exception {
-	public String OutputCSV() {
+	public static void main(String[] args)throws Exception {
 
 		Connection conn = null;
 		String url = "jdbc:mysql://localhost:3306/goods";//使用するデータベース名を設定
@@ -26,27 +27,17 @@ public class OutPutDAO {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			conn = DriverManager.getConnection(url, user, password);
 
-	        File file = new File("java.csv");
+			//現在時間を取得
+	        Date d = new Date();
+	        SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
+	        String now = df.format(d);
 
-	        //ファイルパスを取得する
-	        String str = file.getAbsolutePath();
-
-	        System.out.println("pass : " + str);
-
-//			//現在時間を取得
-//	        Date d = new Date();
-//	        SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
-//	        String now = df.format(d);
-//
-//	        //現在時間をつけたファイルを生成
-//			File f = new File("C:\\Users\\s1-01.S1-01\\Desktop\\家計簿"+now+".csv");
+	        //現在時間をつけたファイルを生成
+			File f = new File("C:\\Users\\s1-01.S1-01\\Desktop\\家計簿"+now+".csv");
 
 			//文字コードを指定して書き込むやつ？
-		    OutputStreamWriter osw  = new OutputStreamWriter(new FileOutputStream(str), "SHIFT-JIS");
+		    OutputStreamWriter osw  = new OutputStreamWriter(new FileOutputStream(f), "SHIFT-JIS");
 		    BufferedWriter bw = new BufferedWriter(osw);
-
-		    StringBuilder sb = new StringBuilder() ;
-
 
 			Statement stmt = conn.createStatement();
 
@@ -58,13 +49,9 @@ public class OutPutDAO {
 			while (rs.next()) {
 				String c1=rs.getString("Field");
 				bw.write("\""+c1+"\",");
-
-				sb.append("\""+c1+"\",");
-
-
 			}
 			bw.write("\n");
-			sb.append("\n");
+
 			//データを表示するSQL分
 			sql = "SELECT * FROM 家計簿";
 			rs = stmt.executeQuery(sql);
@@ -83,34 +70,18 @@ public class OutPutDAO {
 				bw.write("\""+d4+"\",");
 				bw.write("\""+d5+"\"");
 				bw.write("\n");
-
-				sb.append("\""+d1+"\",");
-				sb.append("\""+d2+"\",");
-				sb.append("\""+d3+"\",");
-				sb.append("\""+d4+"\",");
-				sb.append("\""+d5+"\",");
-
 			}
 			//閉じる
 			bw.close();
-
-			System.out.println(sb.toString());
-
-
 			rs.close();
 			stmt.close();
 
-			return sb.toString() ;
-
 		} catch (ClassNotFoundException e) {
 			System.out.println("ClassNotFoundException:" + e.getMessage());
-			return null ;
 		} catch (SQLException e) {
 			System.out.println("SQLException:" + e.getMessage());
-			return null ;
 		} catch (Exception e) {
 			System.out.println("Exception:" + e.getMessage());
-			return null ;
 		} finally {
 			try {
 				if (conn != null) {
@@ -118,7 +89,6 @@ public class OutPutDAO {
 				}
 			} catch (SQLException e) {
 				System.out.println("SQLException:" + e.getMessage());
-				return null ;
 			}
 
 		}
