@@ -43,7 +43,7 @@ public class SendMail {
 		String toAddress=mail;//送信先アドレス
 
 		String fromAddress="relax.pilates123@gmail.com";//送信元
-		String password="relax321";//送信元のパスわード
+		String password="******";//送信元のパスワード
 
 		mailSend(title,text,toAddress,fromAddress,password);//パスワード
 		return true;//時間があれば送信できてないか確認追加する
