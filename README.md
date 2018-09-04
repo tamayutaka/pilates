@@ -15,10 +15,12 @@ tamayutaka開発一覧：
 \src\bo\MailDataLogic.java
 
 \src\bo\SendMail.java
+
 ---------------------------　
 
 
 \src\dao\DataDAO.java
+
 ---------------------------
 　
 
@@ -26,12 +28,14 @@ tamayutaka開発一覧：
 \src\model\MailData.java
 
 \src\model\ReserveData
+
 ---------------------------　
 
 
 \src\servlet\Mail.java
 
 \src\servlet\Reserve.java
+
 ---------------------------
 
 \src\test\TestSendMail.java
