@@ -17,8 +17,8 @@ tamayutaka開発一覧：
 \src\bo\SendMail.java
 
 
----------------------------　
-
+---------------------------
+　
 
 \src\dao\DataDAO.java
 
@@ -31,14 +31,15 @@ tamayutaka開発一覧：
 
 \src\model\ReserveData
 
----------------------------　
-
+---------------------------
+　
 
 \src\servlet\Mail.java
 
 \src\servlet\Reserve.java
 
 ---------------------------
+　
 
 \src\test\TestSendMail.java
 
