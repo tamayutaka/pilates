@@ -5,7 +5,7 @@
 5名チーム
 
 tamayutaka担当：プロジェクトリーダー
-
+---------------------------
 tamayutaka開発一覧：
 
 \src\bo\DataCheck.java
