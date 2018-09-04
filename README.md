@@ -5,6 +5,7 @@
 5名チーム
 
 tamayutaka担当：プロジェクトリーダー
+
 ---------------------------
 tamayutaka開発一覧：
 
@@ -27,7 +28,7 @@ tamayutaka開発一覧：
 \src\model\ReserveData
 
 ---------------------------
-　
+
 \src\servlet\Mail.java
 
 \src\servlet\Reserve.java
